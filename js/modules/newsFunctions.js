@@ -1,4 +1,6 @@
-function getDataAndCreateCards(limit, sort, cardBodyTemplate) {
+function getDataAndCreateCards(limit, sort, cardBodyTemplate, preloader) {
+  showPreloader(preloader);
+
   fetch(`/api/news?limit=${limit}&sort=${sort}`, {
     method: "GET",
     headers: {
@@ -14,10 +16,20 @@ function getDataAndCreateCards(limit, sort, cardBodyTemplate) {
     })
     .then((jsonData) => {
       createCards(jsonData, cardBodyTemplate);
+
+      hidePreloader(preloader);
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+}
+
+function showPreloader(preloader) {
+  preloader.style.display = "flex";
+}
+
+function hidePreloader(preloader) {
+  preloader.style.display = "none";
 }
 
 function createCards(jsonDatas, cardBodyTemplate) {

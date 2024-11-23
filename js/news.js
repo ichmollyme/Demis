@@ -12,4 +12,6 @@ const cardBodyTemplate = `
     </figure>
 `;
 
-getDataAndCreateCards(5, "desc", cardBodyTemplate);
+const preloader = document.getElementById("preloader");
+
+getDataAndCreateCards(5, "desc", cardBodyTemplate, preloader);
