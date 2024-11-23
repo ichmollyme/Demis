@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^api/feedback$ api/router.php [L,QSA]
+RewriteRule ^api/news$ api/router.php [L,QSA]
+RewriteRule ^api/feedback/(\d+)$ api/router.php [L,QSA]
+RewriteRule ^api/news/(\d+)$ api/router.php [L,QSA]

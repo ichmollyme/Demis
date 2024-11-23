@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  max-width: 1240px;
+  margin-top: 50px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 1240px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(61, 75, 83, 0.4);
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card__thumb {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.card__thumb::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.card__image {
+  height: 510px;
+  transition: 0.5s ease-in-out;
+}
+.card__caption {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  padding: 0 20px;
+  color: white;
+}
+
+.card__title {
+  display: -webkit-box;
+  max-height: 85px;
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  line-height: 28px;
+  text-shadow: 0px 1px 5px black;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+}
+
+.news-button {
+  text-align: end;
+}
+
+.news-button__button {
+  padding: 0.6rem 1.3rem;
+  background-color: #ba1735;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 170px;
+  height: 60px;
+}
+
+.news-button__button:hover {
+  background-color: transparent;
+  color: #ba1735;
+  border: 2px solid #ba1735;
+  background-color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    justify-content: center;
+    width: auto;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .news-button {
+    text-align: center;
+  }
+}

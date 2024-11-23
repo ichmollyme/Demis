@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/feedback.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Форма обратной связи</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+
+            <form action="" method="post" id="registration-form">
+                <h3 class="title">Заполните форму</h3>
+
+                <div class="input-container">
+                    <input name="fullname" type="username" id="fullname" class="input">
+                    <label for="">Ваше ФИО</label>
+                    <span>Ваше ФИО</span>
+                </div>
+
+                <div class="input-container">
+                    <input name="adress" type="adress" id="adress" class="input">
+                    <label for="">Адрес</label>
+                    <span>Адрес</span>
+                </div>
+
+                <div class="input-container">
+                    <input name="phoneNumber" type="phone_number" id="phoneNumber" class="input">
+                    <label for="">Контактный номер</label>
+                    <span>Контактный номер</span>
+                </div>
+
+                <div class="input-container">
+                    <input name="email" type="mail" id="email" class="input">
+                    <label for="">Электронная почта</label>
+                    <span>Электронная почта</span>
+                </div>
+                <input type="submit" value="Отправить" class="btn">
+
+            </form>
+            <div class="error-wrapper"></div>
+        </div>
+
+        <div class="table-container">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>FullName</th>
+                        <th>Adress</th>
+                        <th>PhoneNumber</th>
+                        <th>Email</th>
+                        <th>CreateDate</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="/js/modules/feedbackFunctions.js"></script>
+    <script type="module" src="/js/feedback.js"></script>
+</body>
+
+</html>
